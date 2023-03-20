@@ -34,6 +34,16 @@ public class ShippingTest {
 
 
     // add your code here
+    for (ShippingItem i : itemList) {
+      if (i instanceof InsuredShippingItem) {
+        ((InsuredShippingItem) i).addMoreInsurance(30);
+        totalCost += ((InsuredShippingItem) i).getCost();
+      } else {
+        totalCost += ((ShippingItem) i).getCost();
+      }
+    }
+
+
 
 
 
